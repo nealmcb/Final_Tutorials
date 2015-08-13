@@ -1,0 +1,204 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww25400\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs34 \cf0 \CocoaLigature0 $ ssh ruprech@login.rc.colorado.edu\
+Password:\
+\
+login03:~$ cd /projects/ruprech\
+login03:ruprech$ mkdir tutorial-data\
+login03:ruprech$ cd tutorial-data\
+login03:tutorial-data$ ls\
+login03:tutorial-data$ echo "a line in file1" > file1\
+login03:tutorial-data$ echo "another line in file1" >> file1\
+login03:tutorial-data$ echo "yet another line in file1" >> file1\
+login03:tutorial-data$ cat file1\
+a line in file1\
+another line in file1\
+yet another line in file1\
+login03:tutorial-data$ cp file1 file2\
+login03:tutorial-data$ ls\
+file1  file2\
+login03:tutorial-data$ cat file2\
+a line in file1\
+another line in file1\
+yet another line in file1\
+login03:tutorial-data$ mkdir directory1\
+login03:tutorial-data$ cd directory1\
+login03:directory1$ cd ..\
+login03:tutorial-data$ mv file2 file3\
+login03:tutorial-data$ ls\
+directory1  file1  file3\
+login03:tutorial-data$ cd directory1\
+login03:directory1$ echo "Kr is a noble gas\
+> Kris Kringle brings gifts\
+> kryptonite is bad for Superman" > input.txt\
+login03:directory1$ cat input.txt \
+Kr is a noble gas\
+Kris Kringle brings gifts\
+kryptonite is bad for Superman\
+login03:directory1$ cd ..\
+login03:tutorial-data$ touch directory1/another-file\
+login03:tutorial-data$ ls directory1\
+another-file  input.txt\
+login03:tutorial-data$ pwd\
+/projects/ruprech/tutorial-data\
+login03:tutorial-data$ ls\
+directory1  file1  file3\
+login03:tutorial-data$ cat file1 file3 > file4\
+login03:tutorial-data$ cat file4\
+a line in file1\
+another line in file1\
+yet another line in file1\
+a line in file1\
+another line in file1\
+yet another line in file1\
+login03:tutorial-data$ cat file1 file3 > file1      # This is not what you want!!\
+login03:tutorial-data$ cat file3 >> file1           # This is the right way to append file3 to file1\
+login03:tutorial-data$ cd ~\
+login03:~$ \
+login03:~$ pwd\
+/home/ruprech\
+login03:~$ cd -\
+/projects/ruprech/tutorial-data\
+login03:tutorial-data$ pwd\
+/projects/ruprech/tutorial-data\
+login03:tutorial-data$ cd .\
+login03:tutorial-data$ pwd\
+/projects/ruprech/tutorial-data\
+login03:tutorial-data$ cd ..\
+login03:ruprech$ pwd\
+/projects/ruprech\
+login03:ruprech$ cd /projects/ruprech/tutorial-data/directory1/\
+login03:directory1$ pwd\
+/projects/ruprech/tutorial-data/directory1\
+login03:directory1$ cd ../../tutorial-data/directory1/\
+login03:directory1$ pwd\
+/projects/ruprech/tutorial-data/directory1\
+login03:directory1$ cd ..\
+login03:tutorial-data$ ls -l directory1/\
+total 4\
+-rw-r--r-- 1 ruprech ruprechgrp  0 Aug 12 23:14 another-file\
+-rw-r--r-- 1 ruprech ruprechgrp 75 Aug 12 23:13 input.txt\
+login03:tutorial-data$ ls -ld directory1\
+drwxr-xr-x 2 ruprech ruprechgrp 4096 Aug 12 23:14 directory1\
+login03:tutorial-data$ touch .dotfile\
+login03:tutorial-data$ ls\
+directory1  file1  file3  file4\
+login03:tutorial-data$ ls -a\
+.  ..  directory1  .dotfile  file1  file3  file4\
+login03:tutorial-data$ tar -cf directory1.tar directory1/\
+login03:tutorial-data$ ls\
+directory1  directory1.tar  file1  file3  file4\
+login03:tutorial-data$ tar -tvf directory1.tar\
+drwxr-xr-x ruprech/ruprechgrp 0 2015-08-12 23:14 directory1/\
+-rw-r--r-- ruprech/ruprechgrp 75 2015-08-12 23:13 directory1/input.txt\
+-rw-r--r-- ruprech/ruprechgrp  0 2015-08-12 23:14 directory1/another-file\
+login03:tutorial-data$ mkdir temp\
+login03:tutorial-data$ cp directory1.tar temp\
+login03:tutorial-data$ cd temp\
+login03:temp$ gzip directory1.tar \
+login03:temp$ ls -l\
+total 4\
+-rw-r--r-- 1 ruprech ruprechgrp 279 Aug 12 23:31 directory1.tar.gz\
+login03:temp$ gunzip directory1.tar.gz \
+login03:temp$ ls -l\
+total 12\
+-rw-r--r-- 1 ruprech ruprechgrp 10240 Aug 12 23:31 directory1.tar\
+login03:temp$ tar -xf directory1.tar \
+login03:temp$ ls \
+directory1  directory1.tar\
+login03:temp$ ls -l directory1\
+total 4\
+-rw-r--r-- 1 ruprech ruprechgrp  0 Aug 12 23:14 another-file\
+-rw-r--r-- 1 ruprech ruprechgrp 75 Aug 12 23:13 input.txt\
+login03:temp$ cd ..\
+login03:tutorial-data$ rm -rf temp\
+login03:tutorial-data$ ls ~/datafile\
+ls: cannot access /home/ruprech/datafile: No such file or directory\
+login03:tutorial-data$ vi ~/datafile\
+login03:tutorial-data$ chmod g-s .\
+login03:tutorial-data$ ls -l\
+total 20\
+drwxr-xr-x 2 ruprech ruprechgrp  4096 Aug 12 23:14 directory1\
+-rw-r--r-- 1 ruprech ruprechgrp 10240 Aug 12 23:31 directory1.tar\
+-rw-r--r-- 1 ruprech ruprechgrp    64 Aug 12 23:09 file1\
+-rw-r--r-- 1 ruprech ruprechgrp    64 Aug 12 23:09 file3\
+-rw-r--r-- 1 ruprech ruprechgrp   128 Aug 12 23:15 file4\
+login03:tutorial-data$ chmod g+w file1\
+login03:tutorial-data$ ls -l file1\
+-rw-rw-r-- 1 ruprech ruprechgrp 64 Aug 12 23:09 file1\
+login03:tutorial-data$ chmod go=rx file4\
+login03:tutorial-data$ ls -l file4\
+-rw-r-xr-x 1 ruprech ruprechgrp 128 Aug 12 23:15 file4\
+login03:tutorial-data$ ls f*\
+file1  file3  file4\
+login03:tutorial-data$ ls f?\
+ls: cannot access f?: No such file or directory\
+login03:tutorial-data$ cd directory1\
+login03:directory1$ ls\
+another-file  input.txt\
+login03:directory1$ vi input.txt\
+login03:directory1$ cat input.txt \
+Kr is a noble gas\
+\
+Kris Kringle brings gifts\
+\
+kryptonite is bad for Superman\
+login03:directory1$ grep kr input.txt \
+kryptonite is bad for Superman\
+login03:directory1$ grep -i kr input.txt \
+Kr is a noble gas\
+Kris Kringle brings gifts\
+kryptonite is bad for Superman\
+login03:directory1$ cat input.txt | grep gas\
+Kr is a noble gas\
+login03:directory1$ sed 's/Kr/krypton/g' < input.txt > output.txt\
+login03:directory1$ cat output.txt \
+krypton is a noble gas\
+\
+kryptonis kryptoningle brings gifts\
+\
+kryptonite is bad for Superman\
+login03:directory1$ cat input.txt | sed '/^$/d'\
+Kr is a noble gas\
+Kris Kringle brings gifts\
+kryptonite is bad for Superman\
+login03:directory1$ sed -e 's/^/   /g' input.txt \
+   Kr is a noble gas\
+   \
+   Kris Kringle brings gifts\
+   \
+   kryptonite is bad for Superman\
+login03:directory1$ head -5 /etc/passwd\
+root:x:0:0:root:/root:/bin/bash\
+bin:x:1:1:bin:/bin:/sbin/nologin\
+daemon:x:2:2:daemon:/sbin:/sbin/nologin\
+adm:x:3:4:adm:/var/adm:/sbin/nologin\
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin\
+login03:directory1$ head -5 /etc/passwd | awk -F: '\{print $1,$7\}'\
+root /bin/bash\
+bin /sbin/nologin\
+daemon /sbin/nologin\
+adm /sbin/nologin\
+lp /sbin/nologin\
+login03:directory1$ cp ~/datafile .\
+login03:directory1$ cat datafile\
+header1 header2\
+16	44\
+0	19\
+8.3	103.456\
+11	9\
+subheadA subheadB\
+3	5\
+9	2\
+login03:directory1$ grep '^[0-9]' datafile | awk '\{print $2, 3.14*$1\}'\
+44 50.24\
+19 0\
+103.456 26.062\
+9 34.54\
+5 9.42\
+2 28.26\
+}
