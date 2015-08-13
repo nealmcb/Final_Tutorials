@@ -1,0 +1,362 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww22680\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs42 \cf0 \CocoaLigature0 $ ssh ruprech@login.rc.colorado.edu\
+ruprech@login.rc.colorado.edu's password: \
+Last login: Mon Aug  3 08:44:13 2015 from arce-rc138-150-dhcp.colorado.edu\
+Welcome to login04\
+\
+Please see http://www.rc.colorado.edu for more information and contact us\
+at rc-help@colorado.edu if you have any questions.  To sign up for system \
+status updates and other announcements by email, send an email to \
+rc-announce-join@colorado.edu.\
+\
+***\
+We strongly encourage you to compile/build your programs on the compile\
+nodes (janus-compile1 - janus-compile4) rather than on the login nodes.\
+***\
+login04:~$ clear\
+\
+\
+\
+\
+\
+\
+login04:~$ getent passwd ruprech\
+ruprech:*:14216:14216:Ruprecht, Peter:/home/ruprech:/bin/bash\
+login04:~$ groups ruprech\
+ruprech : ruprechpgrp rcopspgrp ruprechgrp icsgrp hlonggrp UCB00000055grp testgrp flowgrp login04:~$ pwd\
+/home/ruprech\
+login04:~$ echo PWD\
+PWD\
+login04:~$ echo $PWD\
+/home/ruprech\
+login04:~$ cd /projects/ruprech/\
+login04:ruprech$ echo $PWD\
+/projects/ruprech\
+login04:ruprech$ echo $pwd\
+\
+login04:ruprech$ env\
+MANPATH=/curc/slurm/slurm/current/share/man:/curc/tools/x86_64/rh6/software/lmod/lmod/share/man:/usr/local/share/man:/usr/share/man/overrides:/usr/share/man/en:/usr/share/man:/usr/man:/usr/local/man\
+HOSTNAME=login04.rc.colorado.edu\
+SLURM_ROOT=/curc/slurm/slurm/current\
+TERM=xterm-256color\
+SHELL=/bin/bash\
+HISTSIZE=1000\
+LMOD_DEFAULT_MODULEPATH=/curc/tools/Modules/redhat_6_x86_64/supported:/curc/tools/Modules/redhat_6_x86_64/unsupported\
+MODULEPATH_ROOT=/curc/tools/x86_64/rh6/modules\
+SSH_CLIENT=128.138.65.101 49665 22\
+LMOD_PACKAGE_PATH=/curc/tools/x86_64/rh6/modules/.site\
+I_MPI_PMI_LIBRARY=/curc/slurm/slurm/current/lib/libpmi.so\
+LMOD_PKG=/curc/tools/x86_64/rh6/software/lmod/6.0.8\
+LMOD_VERSION=6.0.8\
+SSH_TTY=/dev/pts/10\
+USER=ruprech\
+LD_LIBRARY_PATH=/curc/slurm/slurm/current/lib\
+LMOD_sys=Linux\
+LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lz=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.bz=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.rar=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:\
+LMOD_PREPEND_BLOCK=normal\
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MSxiYXNlTXBhdGhBPXsiL2N1cmMvdG9vbHMvTW9kdWxlcy9yZWRoYXRfNl94ODZfNjQvc3VwcG9ydGVkIiwiL2N1cmMvdG9vbHMvTW9kdWxlcy9yZWRoYXRfNl94ODZfNjQvdW5zdXBwb3J0ZWQiLH0sWyJjX3JlYnVpbGRUaW1lIl09ZmFsc2UsWyJjX3Nob3J0VGltZSJdPWZhbHNlLGZhbWlseT17fSxpbmFjdGl2ZT17fSxtVD17c2x1cm09e1siRk4iXT0iL2N1cmMvdG9vbHMvTW9kdWxlcy9yZWRoYXRfNl94ODZfNjQvc3VwcG9ydGVkL3NsdXJtL3NsdXJtIixbImRlZmF1bHQiXT0wLFsiZnVsbE5hbWUiXT0ic2x1cm0vc2x1cm0iLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInNob3J0Il09InNsdXJtIixbInN0YXR1cyJd\
+MAIL=/var/spool/mail/ruprech\
+PATH=/curc/slurm/slurm/current/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin\
+LMOD_SETTARG_CMD=:\
+PWD=/projects/ruprech\
+_LMFILES_=/curc/tools/Modules/redhat_6_x86_64/supported/slurm/slurm\
+LANG=en_US.UTF-8\
+MODULEPATH=/curc/tools/Modules/redhat_6_x86_64/supported:/curc/tools/Modules/redhat_6_x86_64/unsupported\
+_ModuleTable_Sz_=2\
+LOADEDMODULES=slurm/slurm\
+PS1=\\h:\\W$ \
+LMOD_CMD=/curc/tools/x86_64/rh6/software/lmod/6.0.8/libexec/lmod\
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass\
+HISTCONTROL=ignoredups\
+SHLVL=1\
+HOME=/home/ruprech\
+_ModuleTable002_=PSJhY3RpdmUiLH0sfSxtcGF0aEE9eyIvY3VyYy90b29scy9Nb2R1bGVzL3JlZGhhdF82X3g4Nl82NC9zdXBwb3J0ZWQiLCIvY3VyYy90b29scy9Nb2R1bGVzL3JlZGhhdF82X3g4Nl82NC91bnN1cHBvcnRlZCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvY3VyYy90b29scy9Nb2R1bGVzL3JlZGhhdF82X3g4Nl82NC9zdXBwb3J0ZWQ6L2N1cmMvdG9vbHMvTW9kdWxlcy9yZWRoYXRfNl94ODZfNjQvdW5zdXBwb3J0ZWQiLFsidmVyc2lvbiJdPTIsfQ==\
+BASH_ENV=/curc/tools/x86_64/rh6/software/lmod/lmod/init/bash\
+LMOD_arch=x86_64\
+LOGNAME=ruprech\
+CVS_RSH=ssh\
+SSH_CONNECTION=128.138.65.101 49665 192.12.246.36 22\
+MODULESHOME=/curc/tools/x86_64/rh6/software/lmod/6.0.8\
+LESSOPEN=|/usr/bin/lesspipe.sh %s\
+LMOD_FULL_SETTARG_SUPPORT=no\
+DISPLAY=localhost:12.0\
+LMOD_DIR=/curc/tools/x86_64/rh6/software/lmod/6.0.8/libexec\
+LMOD_COLORIZE=yes\
+G_BROKEN_FILENAMES=1\
+BASH_FUNC_module()=() \{  eval $($LMOD_CMD bash "$@");\
+ [ $? = 0 ] && eval $($\{LMOD_SETTARG_CMD:-:\} -s sh)\
+\}\
+BASH_FUNC_ml()=() \{  eval $($LMOD_DIR/ml_cmd "$@")\
+\}\
+_=/bin/env\
+OLDPWD=/home/ruprech\
+login04:ruprech$ env | less\
+login04:ruprech$ pwd\
+/projects/ruprech\
+login04:ruprech$ export FROG=kermit\
+login04:ruprech$ echo FROG\
+FROG\
+login04:ruprech$ echo $FROG\
+kermit\
+login04:ruprech$ export FROG=\
+login04:ruprech$ echo $FROG\
+\
+login04:ruprech$ set frog=dmitri\
+login04:ruprech$ export FROG=kermit\
+login04:ruprech$ bash\
+login04:ruprech$ echo frog\
+frog\
+login04:ruprech$ echo $frog\
+\
+login04:ruprech$ echo $FROG\
+kermit\
+login04:ruprech$ exit\
+exit\
+login04:ruprech$ echo $frog\
+\
+login04:ruprech$ set frog=dmitri\
+login04:ruprech$ echo $frog\
+\
+login04:ruprech$ which time\
+/usr/bin/time\
+login04:ruprech$ ls\
+3dnlexc			      matlab_R2015a_glnxa64.zip\
+adaptive		      nc\
+ansys			      OSU-MPI\
+bash-4.2		      R2013b\
+bash-4.2.tar		      Ray-2.3.1\
+benchmarks		      rhel-workstation-6.3-x86_64-dvd.iso\
+blanca_workflow		      R-libs\
+bowtie2-2.2.5		      software\
+catdoc-0.94.3		      spank-x11\
+catdoc_0.94.3.orig.tar	      src\
+CICE			      testing\
+dell-dset-lx64-3.7.0.219.bin  tigervnc-1.4.2-1.el6.x86_64.rpm\
+Downloads		      tigervnc-server-1.1.0-8.el6_5.x86_64.rpm\
+DSET-bnode0207.zip	      tigervnc-server-1.4.2-1.el6.x86_64.rpm\
+glfw			      tigervnc-server-module-1.4.2-1.el6.x86_64.rpm\
+gstreamer		      trinityrnaseq-2.0.6\
+khi_2d_mhd_16384.mov	      tutorial\
+khi_3d_mhd_1024.mov	      tutorial-intro\
+kiva			      writetest\
+login04:ruprech$ clear\
+\
+login04:ruprech$ pwd\
+/projects/ruprech\
+login04:ruprech$ cd tutorial-intro\
+login04:tutorial-intro$ pwd\
+/projects/ruprech/tutorial-intro\
+login04:tutorial-intro$ ls\
+another_file  my_directory  my_file  some_file\
+login04:tutorial-intro$ ls -l\
+total 4\
+-rw-r--r-- 1 ruprech ruprechgrp    0 Aug 11 14:19 another_file\
+drwxr-sr-x 2 ruprech ruprechgrp 4096 Aug 11 14:20 my_directory\
+-rw-r--r-- 1 ruprech ruprechgrp   42 Aug 11 14:19 my_file\
+-rw-r--r-- 1 ruprech ruprechgrp   18 Aug 11 14:19 some_file\
+login04:tutorial-intro$ ls -l another_file \
+-rw-r--r-- 1 ruprech ruprechgrp 0 Aug 11 14:19 another_file\
+login04:tutorial-intro$ ls my_directory/\
+file1  file2  file3\
+login04:tutorial-intro$ ls -l my_directory/\
+total 0\
+-rw-r--r-- 1 ruprech ruprechgrp 0 Aug 11 14:19 file1\
+-rw-r--r-- 1 ruprech ruprechgrp 0 Aug 11 14:19 file2\
+-rw-r--r-- 1 ruprech ruprechgrp 0 Aug 11 14:20 file3\
+login04:tutorial-intro$ ls -ld my_directory/\
+drwxr-sr-x 2 ruprech ruprechgrp 4096 Aug 11 14:20 my_directory/\
+login04:tutorial-intro$ touch .dotfile\
+login04:tutorial-intro$ ls\
+another_file  my_directory  my_file  some_file\
+login04:tutorial-intro$ ls -a\
+.  ..  another_file  .dotfile  my_directory  my_file  some_file\
+login04:tutorial-intro$ ls ..\
+3dnlexc			      matlab_R2015a_glnxa64.zip\
+adaptive		      nc\
+ansys			      OSU-MPI\
+bash-4.2		      R2013b\
+bash-4.2.tar		      Ray-2.3.1\
+benchmarks		      rhel-workstation-6.3-x86_64-dvd.iso\
+blanca_workflow		      R-libs\
+bowtie2-2.2.5		      software\
+catdoc-0.94.3		      spank-x11\
+catdoc_0.94.3.orig.tar	      src\
+CICE			      testing\
+dell-dset-lx64-3.7.0.219.bin  tigervnc-1.4.2-1.el6.x86_64.rpm\
+Downloads		      tigervnc-server-1.1.0-8.el6_5.x86_64.rpm\
+DSET-bnode0207.zip	      tigervnc-server-1.4.2-1.el6.x86_64.rpm\
+glfw			      tigervnc-server-module-1.4.2-1.el6.x86_64.rpm\
+gstreamer		      trinityrnaseq-2.0.6\
+khi_2d_mhd_16384.mov	      tutorial\
+khi_3d_mhd_1024.mov	      tutorial-intro\
+kiva			      writetest\
+login04:tutorial-intro$ cd ~\
+login04:~$ pwd\
+/home/ruprech\
+login04:~$ pwd\
+/home/ruprech\
+login04:~$ cd -\
+/projects/ruprech/tutorial-intro\
+login04:tutorial-intro$ cd -\
+/home/ruprech\
+login04:~$ cd -\
+/projects/ruprech/tutorial-intro\
+login04:tutorial-intro$ ls /projects/ruprech/tutorial-intro/\
+another_file  my_directory  my_file  some_file\
+login04:tutorial-intro$ ls ../../ruprech/tutorial-intro/\
+another_file  my_directory  my_file  some_file\
+login04:tutorial-intro$ mkdir testdir\
+login04:tutorial-intro$ ls\
+another_file  my_directory  my_file  some_file	testdir\
+login04:tutorial-intro$ rm testdir/\
+rm: cannot remove `testdir/': Is a directory\
+login04:tutorial-intro$ rmdir testdir/\
+login04:tutorial-intro$ mkdir testdir\
+login04:tutorial-intro$ rm -r testdir\
+login04:tutorial-intro$ ls\
+another_file  my_directory  my_file  some_file\
+login04:tutorial-intro$ ls -l\
+total 4\
+-rw-r--r-- 1 ruprech ruprechgrp    0 Aug 11 14:19 another_file\
+drwxr-sr-x 2 ruprech ruprechgrp 4096 Aug 11 14:20 my_directory\
+-rw-r--r-- 1 ruprech ruprechgrp   42 Aug 11 14:19 my_file\
+-rw-r--r-- 1 ruprech ruprechgrp   18 Aug 11 14:19 some_file\
+login04:tutorial-intro$ cat my_file \
+here is some text\
+\
+it is very exciting!\
+\
+\
+login04:tutorial-intro$ vi my_file \
+login04:tutorial-intro$ cat my_file \
+here is some text\
+\
+it is very exciting!\
+\
+whew - more great test\
+login04:tutorial-intro$ ps \
+  PID TTY          TIME CMD\
+ 8620 pts/10   00:00:00 ps\
+29135 pts/10   00:00:00 bash\
+login04:tutorial-intro$ ps -ef\
+UID        PID  PPID  C STIME TTY          TIME CMD\
+root         1     0  0 Mar21 ?        00:05:42 /sbin/init\
+root         2     0  0 Mar21 ?        00:00:08 [kthreadd]\
+ (snip)\
+tibr1099  2880 12610  0 Aug06 pts/11   00:00:00 -/bin/bash\
+pamo8800  2920     1  0 Apr08 ?        00:00:00 ssh-agent\
+tibr1099  2922  2880  0 Aug06 pts/11   00:00:06 ssh jc1\
+jixi7887  3456     1  0 Jun28 ?        00:00:41 -sh\
+phma6156  3457     1  0 May21 ?        00:00:00 /usr/bin/ssh-agent -s\
+jixi7887  3520  3456  0 Jun28 ?        00:00:00 [csh] <defunct>\
+root      3538     2  0 Mar21 ?        00:00:00 [cfs_rh_00]\
+root      3539     2  0 Mar21 ?        00:00:00 [cfs_rh_01]\
+root      3540     2  0 Mar21 ?        00:00:00 [cfs_rh_02]\
+root      3541     2  0 Mar21 ?        00:00:00 [cfs_rh_03]\
+phma6156  3546     1  0 Jun24 ?        00:00:00 /usr/bin/ssh-agent -s\
+root      3564     2  0 Mar21 ?        00:00:00 [obd_zombid]\
+ (snip)\
+login04:tutorial-intro$ ps -ef | less\
+login04:tutorial-intro$ ps -ef | grep ruprech\
+ruprech   9219 29135  2 16:18 pts/10   00:00:00 ps -ef\
+ruprech   9220 29135  0 16:18 pts/10   00:00:00 grep ruprech\
+root     29079  6686  0 15:21 ?        00:00:00 sshd: ruprech [priv]                     \
+ruprech  29134 29079  0 15:22 ?        00:00:00 sshd: ruprech@pts/10                     \
+ruprech  29135 29134  0 15:22 pts/10   00:00:00 -bash\
+login04:tutorial-intro$ ps -ef | wc -l\
+736\
+login04:tutorial-intro$ sleep 10\
+login04:tutorial-intro$ sleep 200 &\
+[1] 10207\
+login04:tutorial-intro$ ps -ef | grep ruprech\
+ruprech  10207 29135  0 16:19 pts/10   00:00:00 sleep 200\
+ruprech  10427 29135  3 16:20 pts/10   00:00:00 ps -ef\
+ruprech  10428 29135  0 16:20 pts/10   00:00:00 -bash\
+root     29079  6686  0 15:21 ?        00:00:00 sshd: ruprech [priv]                     \
+ruprech  29134 29079  0 15:22 ?        00:00:00 sshd: ruprech@pts/10                     \
+ruprech  29135 29134  0 15:22 pts/10   00:00:00 -bash\
+login04:tutorial-intro$ kill 10207\
+login04:tutorial-intro$ ps -ef | grep ruprech\
+ruprech  10547 29135  0 16:21 pts/10   00:00:00 ps -ef\
+ruprech  10548 29135  0 16:21 pts/10   00:00:00 grep ruprech\
+root     29079  6686  0 15:21 ?        00:00:00 sshd: ruprech [priv]                     \
+ruprech  29134 29079  0 15:22 ?        00:00:00 sshd: ruprech@pts/10                     \
+ruprech  29135 29134  0 15:22 pts/10   00:00:00 -bash\
+[1]+  Terminated              sleep 200\
+login04:tutorial-intro$ ps -ef | grep ruprech^C\
+login04:tutorial-intro$ sleep 200 &\
+[1] 10777\
+login04:tutorial-intro$ jobs -l\
+[1]+ 10777 Running                 sleep 200 &\
+login04:tutorial-intro$ sleep 200 \
+^C\
+login04:tutorial-intro$ sleep 200 \
+^Z\
+[2]+  Stopped                 sleep 200\
+login04:tutorial-intro$ bg\
+[2]+ sleep 200 &\
+login04:tutorial-intro$ fg\
+sleep 200\
+^C\
+login04:tutorial-intro$ top\
+\
+top - 16:27:16 up 143 days, 54 min, 24 users,  load average: 1.27, 1.15, 1.10\
+Tasks: 730 total,   3 running, 724 sleeping,   0 stopped,   3 zombie\
+Cpu(s): 17.2%us,  0.8%sy,  0.0%ni, 81.6%id,  0.4%wa,  0.0%hi,  0.0%si,  0.0%st\
+Mem:  16333652k total, 13617640k used,  2716012k free,   160688k buffers\
+Swap:  8241144k total,   550216k used,  7690928k free,  9280448k cached\
+\
+\cf1 \cb0   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                            \cf0 \cb1 \
+10832 mayo4054  20   0  520m 518m  704 R 99.9  3.3   4:05.37 bader                               \
+ 6586 root      20   0  347m  85m  27m R 38.6  0.5 257:43.57 sssd_be                             \
+ 1965 nobody    20   0  187m 7128 1992 S  0.8  0.0 664:41.25 gmond                               \
+ 1854 root      20   0 1864m 6020 2880 S  0.5  0.0   1311:00 automount                           \
+11186 ruprech   20   0 26464 1948 1120 R  0.5  0.0   0:00.51 top                                 \
+   37 root      20   0     0    0    0 S  0.2  0.0  31:32.97 events/2                            \
+   39 root      20   0     0    0    0 S  0.2  0.0  38:51.74 events/4                            \
+ 1759 root      20   0     0    0    0 S  0.2  0.0  56:28.47 rpciod/5                            \
+ 1883 root      20   0 24856 3408  808 S  0.2  0.0 280:21.58 cgrulesengd                         \
+ 7630 jimc5170  20   0  152m 4724 1996 S  0.2  0.0 140:31.02 gvfsd-trash                         \
+12610 tibr1099  20   0  218m  57m  828 S  0.2  0.4  14:20.91 screen                              \
+26853 tibr1099  20   0  122m 2608 1496 S  0.2  0.0   0:01.55 sshd                                \
+    1 root      20   0 21436 1264 1048 S  0.0  0.0   5:42.16 init                                \
+    2 root      20   0     0    0    0 S  0.0  0.0   0:08.15 kthreadd                            \
+[1]+  Done                    sleep 200\
+login04:tutorial-intro$ ls > listing\
+login04:tutorial-intro$ cat listing\
+another_file\
+listing\
+my_directory\
+my_file\
+some_file\
+login04:tutorial-intro$ ls -l > listing\
+login04:tutorial-intro$ cat listing\
+total 4\
+-rw-r--r-- 1 ruprech ruprechgrp    0 Aug 11 14:19 another_file\
+-rw-r--r-- 1 ruprech ruprechgrp    0 Aug 11 16:29 listing\
+drwxr-sr-x 2 ruprech ruprechgrp 4096 Aug 11 14:20 my_directory\
+-rw-r--r-- 1 ruprech ruprechgrp   64 Aug 11 16:13 my_file\
+-rw-r--r-- 1 ruprech ruprechgrp   18 Aug 11 14:19 some_file\
+login04:tutorial-intro$ ls -l >> listing\
+login04:tutorial-intro$ cat listing\
+total 4\
+-rw-r--r-- 1 ruprech ruprechgrp    0 Aug 11 14:19 another_file\
+-rw-r--r-- 1 ruprech ruprechgrp    0 Aug 11 16:29 listing\
+drwxr-sr-x 2 ruprech ruprechgrp 4096 Aug 11 14:20 my_directory\
+-rw-r--r-- 1 ruprech ruprechgrp   64 Aug 11 16:13 my_file\
+-rw-r--r-- 1 ruprech ruprechgrp   18 Aug 11 14:19 some_file\
+total 8\
+-rw-r--r-- 1 ruprech ruprechgrp    0 Aug 11 14:19 another_file\
+-rw-r--r-- 1 ruprech ruprechgrp  310 Aug 11 16:29 listing\
+drwxr-sr-x 2 ruprech ruprechgrp 4096 Aug 11 14:20 my_directory\
+-rw-r--r-- 1 ruprech ruprechgrp   64 Aug 11 16:13 my_file\
+-rw-r--r-- 1 ruprech ruprechgrp   18 Aug 11 14:19 some_file\
+login04:tutorial-intro$ exit\
+logout\
+\
+Connection to login.rc.colorado.edu closed.}
