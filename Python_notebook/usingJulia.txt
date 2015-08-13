@@ -1,0 +1,25 @@
+For a possible method to have Jupyter use Julia:
+
+1. Julia must be installed
+
+I had to tell git to use https instead of git:// for some reason by running:
+git config --global url."https://".insteadOf git://
+
+
+**** I don't know if this changes the overall git behavior.  This was necessary for
+Mac OS X Yosemitte with a Homebrew install of julia.
+
+Then:
+2. In Julia ($julia):
+  Pkg.add("IJulia")
+
+
+
+
+  Now, restart notebook:
+
+  $ipython notebook
+
+  This should have a dropdown option to open a new notebook using Julia.
+
+  
